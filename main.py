@@ -26,9 +26,9 @@ km_label.grid(column=2, row=1)
 
 
 def button_clicked():
-    miles = entry.get()
-    conversion_factor = 0.62137119
-    kilometers = float(miles) / conversion_factor
+    miles = float(entry.get())
+    conversion_factor = 1.609
+    kilometers = miles * conversion_factor
     rounded_km = round(kilometers, 2)
     result_label.config(text=f"{rounded_km}")
 
